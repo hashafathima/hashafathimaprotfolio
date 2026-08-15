@@ -1430,3 +1430,85 @@ nav a:hover::after {
     }
 
 }
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: #ffffff;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 18px 5%;
+
+        position: relative;
+    }
+
+    .navbar nav.nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 5%;
+        right: 5%;
+
+        padding: 20px;
+
+        background: #0d0d0d;
+
+        border: 1px solid #292929;
+
+        border-radius: 10px;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        z-index: 1000;
+    }
+
+    .navbar nav.nav-menu.active {
+        display: flex;
+    }
+
+    .navbar nav.nav-menu a {
+        display: block;
+
+        color: #aaaaaa;
+
+        padding: 8px 0;
+    }
+
+    .navbar nav.nav-menu a:hover {
+        color: #ffffff;
+    }
+
+    .navbar .nav-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+}
