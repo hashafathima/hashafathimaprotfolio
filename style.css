@@ -1992,3 +1992,221 @@ nav a.active::after {
 .project-link:hover {
     color: #888888;
 }
+
+           /* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+    padding: 120px 8%;
+
+    border-top: 1px solid #202020;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.contact-content h2 {
+    max-width: 700px;
+
+    margin: 20px 0;
+
+    color: #ffffff;
+
+    font-size: clamp(40px, 5vw, 72px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.contact-content h2 span {
+    color: #777777;
+}
+
+.contact-description {
+    max-width: 550px;
+
+    color: #888888;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+.contact-email {
+    display: inline-block;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    border-bottom: 1px solid #555555;
+
+    padding-bottom: 8px;
+
+    transition: all 0.3s ease;
+}
+
+.contact-email:hover {
+    color: #999999;
+
+    border-color: #ffffff;
+}
+
+
+/* Social links */
+
+.contact-links {
+    display: flex;
+
+    flex-direction: column;
+
+    border-top: 1px solid #292929;
+}
+
+.contact-link {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 22px 0;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #292929;
+
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.contact-link span:last-child {
+    color: #666666;
+
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover {
+    padding-left: 10px;
+
+    color: #999999;
+}
+
+.contact-link:hover span:last-child {
+    transform: translateX(6px);
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 35px 8%;
+
+    border-top: 1px solid #202020;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.footer-logo {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+.footer-logo span {
+    color: #777777;
+}
+
+.footer-left p,
+.footer-right p {
+    margin-top: 8px;
+
+    color: #666666;
+
+    font-size: 12px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right a {
+    display: inline-block;
+
+    margin-top: 8px;
+
+    color: #999999;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================
+   MOBILE CONTACT
+========================= */
+
+@media (max-width: 800px) {
+
+    .contact-section {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 90px 6%;
+    }
+
+    .contact-content h2 {
+        font-size: 42px;
+
+        letter-spacing: -1px;
+    }
+
+    .footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 30px 6%;
+    }
+
+    .footer-right {
+        text-align: left;
+    }
+
+}
