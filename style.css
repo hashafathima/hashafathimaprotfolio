@@ -1218,3 +1218,215 @@ body {
         gap: 10px;
     }
 }
+
+/* =========================
+   PREMIUM SCROLL EFFECT
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Selection */
+
+::selection {
+    background: #ffffff;
+    color: #000000;
+}
+
+
+/* Smooth Card Hover */
+
+.skill-card,
+.project-card,
+.stat-card {
+    will-change: transform;
+}
+
+
+/* Premium Glow */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.06),
+        transparent 70%
+    );
+
+    top: -180px;
+    right: -150px;
+
+    pointer-events: none;
+}
+
+
+/* Text Animation */
+
+.hero-label,
+.hero-content h1,
+.hero-description,
+.hero-buttons {
+    opacity: 0;
+
+    animation: revealText 0.8s ease forwards;
+}
+
+.hero-label {
+    animation-delay: 0.1s;
+}
+
+.hero-content h1 {
+    animation-delay: 0.25s;
+}
+
+.hero-description {
+    animation-delay: 0.4s;
+}
+
+.hero-buttons {
+    animation-delay: 0.55s;
+}
+
+
+@keyframes revealText {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Code Card Animation */
+
+.hero-card {
+    opacity: 0;
+
+    animation:
+        codeCardReveal 1s ease forwards;
+
+    animation-delay: 0.4s;
+}
+
+
+@keyframes codeCardReveal {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* Button Hover */
+
+.btn {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Navbar */
+
+.navbar {
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Link Underline */
+
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 1px;
+
+    background: #ffffff;
+
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* Project Link Arrow */
+
+.project-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.project-link:hover {
+    transform: translateX(4px);
+}
+
+
+/* Contact Link */
+
+.contact-link {
+    transition:
+        color 0.3s ease,
+        padding 0.3s ease;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .hero::before {
+        width: 300px;
+        height: 300px;
+
+        right: -100px;
+        top: -100px;
+    }
+
+}
