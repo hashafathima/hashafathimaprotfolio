@@ -1512,3 +1512,43 @@ nav a:hover::after {
     }
 
 }
+
+/* =========================
+   SMART NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+
+    z-index: 999;
+
+    background: rgba(8, 8, 8, 0.82);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid #1f1f1f;
+}
+
+
+/* Active Navigation */
+
+nav a.active {
+    color: #ffffff;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+
+/* Mobile active link */
+
+@media (max-width: 700px) {
+
+    nav a.active::after {
+        width: 35px;
+    }
+
+}
