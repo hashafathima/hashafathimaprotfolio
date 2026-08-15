@@ -431,3 +431,156 @@ body {
         font-size: 12px;
     }
 }
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    padding: 120px 7%;
+
+    border-top: 1px solid #1f1f1f;
+
+    background: #0b0b0b;
+}
+
+
+/* Section Heading */
+
+.section-heading {
+    max-width: 800px;
+
+    margin-bottom: 60px;
+}
+
+.section-label {
+    color: #777777;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    color: #ffffff;
+
+    font-size: clamp(35px, 5vw, 58px);
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+}
+
+.section-heading h2 span {
+    color: #777777;
+}
+
+
+/* About Layout */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1.2fr 1fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+/* About Text */
+
+.about-text {
+    max-width: 650px;
+}
+
+.about-text p {
+    color: #999999;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 22px;
+}
+
+
+/* Stats */
+
+.about-stats {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* Stat Card */
+
+.stat-card {
+    padding: 28px;
+
+    background: #121212;
+
+    border: 1px solid #242424;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: #555555;
+
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    color: #ffffff;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.stat-card p {
+    color: #888888;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* About Responsive */
+
+@media (max-width: 800px) {
+
+    .about-section {
+        padding: 90px 5%;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+}
