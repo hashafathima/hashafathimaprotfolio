@@ -436,13 +436,14 @@
     </footer>
 
   </main>
-
 <script>
+
+    // =========================
+    // MOBILE MENU
+    // =========================
 
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
-
-    // Mobile menu
 
     menuToggle.addEventListener("click", () => {
 
@@ -451,7 +452,9 @@
     });
 
 
-    // Close mobile menu
+    // =========================
+    // CLOSE MOBILE MENU
+    // =========================
 
     document.querySelectorAll("#nav-menu a").forEach(link => {
 
@@ -464,11 +467,12 @@
     });
 
 
-    // Active section navigation
+    // =========================
+    // ACTIVE SECTION NAVIGATION
+    // =========================
 
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-menu a");
-
 
     window.addEventListener("scroll", () => {
 
@@ -495,7 +499,9 @@
 
             link.classList.remove("active");
 
-            if (link.getAttribute("href") === "#" + current) {
+            if (
+                link.getAttribute("href") === "#" + current
+            ) {
 
                 link.classList.add("active");
 
@@ -504,6 +510,95 @@
         });
 
     });
+
+
+    // =========================
+    // TYPING ANIMATION
+    // =========================
+
+    const typingText = document.getElementById("typing-text");
+
+    const words = [
+        "FULL STACK DEVELOPER",
+        "AI/ML ENTHUSIAST",
+        "PROBLEM SOLVER"
+    ];
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+
+    function typeEffect() {
+
+        const currentWord = words[wordIndex];
+
+
+        // Typing
+
+        if (!deleting) {
+
+            typingText.textContent =
+                currentWord.substring(0, charIndex + 1);
+
+            charIndex++;
+
+
+            // Word complete
+
+            if (charIndex === currentWord.length) {
+
+                deleting = true;
+
+                setTimeout(typeEffect, 1800);
+
+                return;
+
+            }
+
+        }
+
+
+        // Deleting
+
+        else {
+
+            typingText.textContent =
+                currentWord.substring(0, charIndex - 1);
+
+            charIndex--;
+
+
+            // Word deleted
+
+            if (charIndex === 0) {
+
+                deleting = false;
+
+                wordIndex++;
+
+                if (wordIndex === words.length) {
+
+                    wordIndex = 0;
+
+                }
+
+            }
+
+        }
+
+
+        setTimeout(
+            typeEffect,
+            deleting ? 60 : 100
+        );
+
+    }
+
+
+    // Start typing animation
+
+    typeEffect();
 
 </script>
   
