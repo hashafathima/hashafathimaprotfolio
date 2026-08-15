@@ -939,3 +939,137 @@ body {
         padding: 25px;
     }
 }
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+    padding: 140px 7% 100px;
+
+    background: #080808;
+
+    border-top: 1px solid #1f1f1f;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 80px;
+
+    align-items: end;
+}
+
+
+/* Contact Heading */
+
+.contact-content {
+    max-width: 750px;
+}
+
+.contact-content h2 {
+    color: #ffffff;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+.contact-content h2 span {
+    color: #777777;
+}
+
+
+/* Description */
+
+.contact-description {
+    color: #888888;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    max-width: 600px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Email */
+
+.contact-email {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    border-bottom: 1px solid #555555;
+
+    padding-bottom: 7px;
+
+    transition: 0.3s ease;
+}
+
+.contact-email:hover {
+    color: #999999;
+
+    border-color: #999999;
+}
+
+
+/* Contact Links */
+
+.contact-links {
+    display: flex;
+
+    flex-direction: column;
+
+    border-top: 1px solid #292929;
+}
+
+.contact-link {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 5px;
+
+    color: #aaaaaa;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid #292929;
+
+    transition: 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ffffff;
+
+    padding-left: 12px;
+}
+
+
+/* =========================
+   CONTACT RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .contact-section {
+        padding: 100px 5% 80px;
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+}
