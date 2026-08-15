@@ -2210,3 +2210,8 @@ nav a.active::after {
     }
 
 }
+
+           .coming-soon {
+    color: #666666;
+    cursor: default;
+}
