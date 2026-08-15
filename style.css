@@ -1788,3 +1788,53 @@ nav a.active::after {
     typeEffect();
 
 </script>
+
+       /* =========================
+   ABOUT STAT CARDS
+========================= */
+
+.stat-card {
+    position: relative;
+
+    padding: 28px;
+
+    background: #111111;
+
+    border: 1px solid #292929;
+
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #555555;
+
+    background: #151515;
+}
+
+.stat-card h3 {
+    margin: 0 0 18px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #777777;
+}
+
+.stat-card p {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+.stat-card span {
+    color: #777777;
+
+    font-size: 12px;
+}
