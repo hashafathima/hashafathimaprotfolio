@@ -733,3 +733,209 @@ body {
         padding: 25px;
     }
 }
+
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects-section {
+    padding: 120px 7%;
+
+    background: #0b0b0b;
+
+    border-top: 1px solid #1f1f1f;
+}
+
+
+/* Projects Grid */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* Project Card */
+
+.project-card {
+    padding: 32px;
+
+    background: #111111;
+
+    border: 1px solid #242424;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 430px;
+
+    transition: 0.35s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #555555;
+
+    background: #141414;
+}
+
+
+/* Project Top */
+
+.project-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+}
+
+
+/* Number */
+
+.project-number {
+    color: #666666;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 13px;
+}
+
+
+/* Type */
+
+.project-type {
+    color: #888888;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    border: 1px solid #303030;
+
+    padding: 6px 9px;
+
+    border-radius: 4px;
+}
+
+
+/* Project Title */
+
+.project-card h3 {
+    color: #ffffff;
+
+    font-size: 23px;
+
+    line-height: 1.3;
+
+    margin-bottom: 18px;
+}
+
+
+/* Description */
+
+.project-card > p {
+    color: #888888;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* Technologies */
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: auto;
+
+    margin-bottom: 25px;
+}
+
+.project-tech span {
+    color: #aaaaaa;
+
+    background: #1a1a1a;
+
+    border: 1px solid #292929;
+
+    padding: 6px 9px;
+
+    border-radius: 4px;
+
+    font-size: 10px;
+}
+
+
+/* Project Links */
+
+.project-links {
+    display: flex;
+
+    gap: 10px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #242424;
+}
+
+.project-link {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+.project-link:hover {
+    color: #999999;
+}
+
+
+/* =========================
+   PROJECT RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .projects-section {
+        padding: 90px 5%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 400px;
+
+        padding: 25px;
+    }
+}
